@@ -6,6 +6,12 @@
     license: MIT, see LICENSE for more details.
 """
 
+import socket
+import uuid
+import json
+
+from .config import MAX_RPC_LEN
+
 
 class Proxy(object):
     """

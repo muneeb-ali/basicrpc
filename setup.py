@@ -17,7 +17,7 @@ setup(
     author='Jude Nelson and Muneeb Ali',
     author_email='support@onename.com',
     description='A very simple Python RPC client',
-    keywords='blockchain bitcoin btc cryptocurrency name key value store data',
+    keywords='rpc client server netstring',
     packages=find_packages(),
     download_url='https://github.com/muneeb-ali/basicrpc/archive/master.zip',
     zip_safe=False,

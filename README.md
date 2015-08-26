@@ -1,5 +1,7 @@
 # basicrpc
-A very simple Python RPC client. Currently only supports TCP netstrings (used in python Twisted servers). This client is **not** compliant with JSON-RPC 1.0/2.0 specifications and ignores them on purpose.
+A very simple Python RPC client. 
+
+Currently only supports TCP netstrings (used in python Twisted servers). This client is **not** compliant with JSON-RPC 1.0/2.0 specifications and ignores them on purpose.
 
 Installation:
 > pip install basicrpc

@@ -13,3 +13,5 @@ from basicrpc import Proxy
 c = Proxy(YOUR_SERVER_IP, YOUR_SERVER_PORT)
 print c.ping()
 ``` 
+
+The above example assumes that a function 'ping' is defined at the server side.

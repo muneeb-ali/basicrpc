@@ -11,6 +11,7 @@ import uuid
 import json
 
 from .config import MAX_RPC_LEN
+from .config import DEFAULT_TIMEOUT
 
 
 class Proxy(object):
@@ -22,11 +23,14 @@ class Proxy(object):
     not guarantee that the "result" and "error" keywords will be present.
     """
 
-    def __init__(self, server, port, max_rpc_len=MAX_RPC_LEN):
+    def __init__(self, server, port,
+                 max_rpc_len=MAX_RPC_LEN,
+                 timeout=DEFAULT_TIMEOUT):
         self.server = server
         self.port = port
         self.sock = None
         self.max_rpc_len = max_rpc_len
+        self.timeout = timeout
 
     def __getattr__(self, key):
         try:
@@ -49,6 +53,7 @@ class Proxy(object):
         if self.sock is None:
             self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0)
             self.sock.connect((self.server, self.port))
+            self.sock.settimeout(self.timeout)
 
         return True
 

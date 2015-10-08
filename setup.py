@@ -11,7 +11,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='basicrpc',
-    version='0.0.1',
+    version='0.0.2',
     url='https://github.com/muneeb-ali/basicrpc',
     license='MIT',
     author='Jude Nelson and Muneeb Ali',
